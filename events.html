@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Management Services | Dance Performances & Event Planning | Manish Kumar, Patna</title>
+  <meta name="description" content="Manish Kumar's event management services in Patna — dance performances for weddings, schools & colleges. Full event planning: Beautician, Pandit, Photographer, Videographer, Decoration & Catering.">
+  <meta name="keywords" content="event management Patna, dance performance wedding, school event organiser, college event planner, wedding planner Patna, photographer Patna, decoration Patna, catering Patna">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo" style="color: var(--near-black);">
+        <div class="nav-logo-monogram">MK</div>
+        <span>MANISH <span class="logo-accent">KUMAR</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="classes.html" class="nav-link">Classes</a>
+        <a href="events.html" class="nav-link active">Events</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="#" onclick="openWhatsApp('Hi Manish! I need event management services.')" class="nav-whatsapp">
+          <i class="ri-whatsapp-line"></i><span>WhatsApp</span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <span style="background: var(--near-black);"></span>
+          <span style="background: var(--near-black);"></span>
+          <span style="background: var(--near-black);"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="classes.html" class="nav-link">Classes</a>
+    <a href="events.html" class="nav-link active">Events</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <div class="mobile-cta">
+      <a href="#" onclick="openWhatsApp()" class="btn btn-whatsapp" style="width:100%;justify-content:center;margin-top:1rem;">
+        <i class="ri-whatsapp-line"></i> Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="page-hero">
+    <h1 class="page-hero-title animate-on-scroll">Event Management</h1>
+    <p class="page-hero-subtitle animate-on-scroll delay-1">Dance performances & full-service event planning across Patna.</p>
+    <div class="breadcrumb animate-on-scroll delay-2">
+      <a href="index.html">Home</a><span>/</span><span>Events</span>
+    </div>
+  </section>
+
+  <!-- ============ DANCE PERFORMANCE SERVICES ============ -->
+  <section class="section" id="dance-performances">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrapper animate-on-scroll from-left">
+          <img src="assets/images/event-hero.jpg" alt="Elegant event with dance performance stage" style="border-radius: var(--radius-lg);">
+        </div>
+        <div class="animate-on-scroll from-right">
+          <div class="section-badge"><i class="ri-star-fill"></i> Primary Service</div>
+          <h2>Dance Performance<br>for Your Events</h2>
+          <p>
+            Looking to add a stunning dance performance to your event? I specialise in choreographing and organising dance shows for all types of events — from intimate gatherings to grand celebrations.
+          </p>
+          <p>
+            Whether it's a wedding sangeet, a school annual day, a college fest, or a corporate event — I bring energy, creativity, and professionalism to every stage. With 7+ years of experience and 150+ students trained, I know how to create performances that leave lasting impressions.
+          </p>
+          <div class="about-highlights" style="margin-top: 1.5rem;">
+            <div class="about-highlight"><i class="ri-check-double-fill"></i><span>Custom choreography for any occasion</span></div>
+            <div class="about-highlight"><i class="ri-check-double-fill"></i><span>Solo, group & couple performances</span></div>
+            <div class="about-highlight"><i class="ri-check-double-fill"></i><span>Complete rehearsal & coordination</span></div>
+            <div class="about-highlight"><i class="ri-check-double-fill"></i><span>All 4 dance styles available</span></div>
+          </div>
+          <a href="#" onclick="openWhatsApp('Hi Manish! I want to book a dance performance for my event.')" class="btn btn-primary" style="margin-top: 1rem;">
+            <i class="ri-whatsapp-line"></i> Book a Performance
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EVENT TYPES ============ -->
+  <section class="section section-alt" id="event-types">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <div class="section-badge"><i class="ri-calendar-event-fill"></i> Event Types</div>
+        <h2 class="section-title">Events We Cover</h2>
+        <p class="section-subtitle">From intimate celebrations to grand gatherings — we bring the right energy to every occasion.</p>
+      </div>
+
+      <div class="grid-4">
+        <div class="service-card animate-on-scroll">
+          <div class="service-card-icon">💒</div>
+          <h4>Wedding Events</h4>
+          <p>Sangeet choreography, reception performances, couple dances, and full wedding entertainment.</p>
+        </div>
+
+        <div class="service-card animate-on-scroll delay-1">
+          <div class="service-card-icon">🏫</div>
+          <h4>School Events</h4>
+          <p>Annual day performances, talent shows, cultural programmes, and student choreography.</p>
+        </div>
+
+        <div class="service-card animate-on-scroll delay-2">
+          <div class="service-card-icon">🎓</div>
+          <h4>College Events</h4>
+          <p>College fest performances, freshers party, farewell shows, and inter-college competitions.</p>
+        </div>
+
+        <div class="service-card animate-on-scroll delay-3">
+          <div class="service-card-icon">🎉</div>
+          <h4>Private Parties</h4>
+          <p>Birthday celebrations, anniversary parties, kitty parties, and any special occasion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EVENT PLANNING SERVICES ============ -->
+  <section class="section" id="planning-services">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <div class="section-badge"><i class="ri-service-fill"></i> Full Event Planning</div>
+        <h2 class="section-title">Complete Event Solutions</h2>
+        <p class="section-subtitle">Beyond dance — I offer end-to-end event planning services across Patna. One call, everything arranged.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="service-card animate-on-scroll">
+          <div class="service-card-icon">💄</div>
+          <h4>Beautician</h4>
+          <p>Professional makeup artists and beauticians for bridal, party, and event styling needs.</p>
+        </div>
+
+        <div class="service-card animate-on-scroll delay-1">
+          <div class="service-card-icon">🙏</div>
+          <h4>Pandit</h4>
+          <p>Experienced pandits for all religious ceremonies, puja arrangements, and traditional rituals.</p>
+        </div>
+
+        <div class="service-card animate-on-scroll delay-2">
+          <div class="service-card-icon">📸</div>
+          <h4>Photographer</h4>
+          <p>Professional event photography — pre-wedding shoots, event coverage, and candid moments.</p>
+        </div>
+
+        <div class="service-card animate-on-scroll delay-3">
+          <div class="service-card-icon">🎥</div>
+          <h4>Videographer</h4>
+          <p>Cinematic event videography, wedding films, highlight reels, and full-day coverage.</p>
+        </div>
+
+        <div class="service-card animate-on-scroll delay-4">
+          <div class="service-card-icon">🎨</div>
+          <h4>Decoration</h4>
+          <p>Complete venue decoration — stage setup, floral arrangements, lighting, and theme décor.</p>
+        </div>
+
+        <div class="service-card animate-on-scroll delay-5">
+          <div class="service-card-icon">🍽️</div>
+          <h4>Catering</h4>
+          <p>Delicious catering services — veg/non-veg menus, buffet setup, and live counters for any event.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICE COVERAGE ============ -->
+  <section class="section section-dark" style="text-align: center;">
+    <div class="container">
+      <div class="animate-on-scroll">
+        <div class="section-badge" style="background: rgba(201,169,110,0.15); color: var(--gold);"><i class="ri-map-pin-fill"></i> Coverage Area</div>
+        <h2 style="color: var(--white); margin-bottom: 1rem;">All Over Patna</h2>
+        <p style="color: rgba(255,255,255,0.5); max-width: 600px; margin: 0 auto 2rem; font-size: 1.05rem;">
+          Our event management services cover all areas of Patna and surrounding regions. Whether your event is in the heart of the city or on the outskirts — we've got you covered.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; max-width: 700px; margin: 0 auto;">
+          <span style="background: rgba(255,255,255,0.08); padding: 0.5rem 1.25rem; border-radius: var(--radius-xl); color: rgba(255,255,255,0.7); font-size: 0.9rem;">Kankarbagh</span>
+          <span style="background: rgba(255,255,255,0.08); padding: 0.5rem 1.25rem; border-radius: var(--radius-xl); color: rgba(255,255,255,0.7); font-size: 0.9rem;">Boring Road</span>
+          <span style="background: rgba(255,255,255,0.08); padding: 0.5rem 1.25rem; border-radius: var(--radius-xl); color: rgba(255,255,255,0.7); font-size: 0.9rem;">Patliputra</span>
+          <span style="background: rgba(255,255,255,0.08); padding: 0.5rem 1.25rem; border-radius: var(--radius-xl); color: rgba(255,255,255,0.7); font-size: 0.9rem;">Rajendra Nagar</span>
+          <span style="background: rgba(255,255,255,0.08); padding: 0.5rem 1.25rem; border-radius: var(--radius-xl); color: rgba(255,255,255,0.7); font-size: 0.9rem;">Danapur</span>
+          <span style="background: rgba(255,255,255,0.08); padding: 0.5rem 1.25rem; border-radius: var(--radius-xl); color: rgba(255,255,255,0.7); font-size: 0.9rem;">Phulwari Sharif</span>
+          <span style="background: rgba(255,255,255,0.08); padding: 0.5rem 1.25rem; border-radius: var(--radius-xl); color: rgba(255,255,255,0.7); font-size: 0.9rem;">Bailey Road</span>
+          <span style="background: rgba(201,169,110,0.2); padding: 0.5rem 1.25rem; border-radius: var(--radius-xl); color: var(--gold); font-size: 0.9rem; font-weight: 600;">& All Areas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="section" id="process">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <div class="section-badge"><i class="ri-flow-chart"></i> Process</div>
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-subtitle">Getting your event managed is as simple as 1-2-3.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card animate-on-scroll">
+          <div class="step-number">01</div>
+          <h4>Contact Me</h4>
+          <p>Send a WhatsApp message or call me with your event details — date, type, and requirements.</p>
+        </div>
+
+        <div class="step-card animate-on-scroll delay-1">
+          <div class="step-number">02</div>
+          <h4>Plan Together</h4>
+          <p>We'll discuss the details, finalize services, and create a custom plan that fits your vision and budget.</p>
+        </div>
+
+        <div class="step-card animate-on-scroll delay-2">
+          <div class="step-number">03</div>
+          <h4>Enjoy Your Event</h4>
+          <p>Sit back and relax — I handle everything from coordination to execution. Your perfect event, delivered.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2 class="animate-on-scroll">Plan Your Next Event</h2>
+      <p class="animate-on-scroll delay-1">Whether you need a stunning dance performance or complete event management — let's make it happen. Contact me on WhatsApp.</p>
+      <div class="cta-buttons animate-on-scroll delay-2">
+        <a href="#" onclick="openWhatsApp('Hi Manish! I need event management services for my upcoming event.')" class="btn btn-whatsapp btn-lg">
+          <i class="ri-whatsapp-line"></i> Plan My Event
+        </a>
+        <a href="contact.html" class="btn btn-outline btn-lg">
+          <i class="ri-mail-line"></i> Contact Page
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom: 0.5rem; font-size: 1.25rem;">
+            <div class="nav-logo-monogram" style="width:36px;height:36px;font-size:1rem;">MK</div>
+            MANISH <span class="logo-accent">KUMAR</span>
+          </a>
+          <p>Professional dance trainer, choreographer & event manager based in Patna, Bihar.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+            <a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+            <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Me</a>
+          <a href="classes.html">Dance Classes</a>
+          <a href="events.html">Event Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-column">
+          <h4>Event Services</h4>
+          <a href="#dance-performances">Dance Performance</a>
+          <a href="#planning-services">Beautician</a>
+          <a href="#planning-services">Photography</a>
+          <a href="#planning-services">Decoration</a>
+          <a href="#planning-services">Catering</a>
+        </div>
+        <div class="footer-column">
+          <h4>Get in Touch</h4>
+          <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-bottom: 0.75rem;">
+            <i class="ri-map-pin-line" style="color: var(--gold);"></i> All Over Patna, Bihar
+          </p>
+          <a href="#" onclick="openWhatsApp()" class="btn btn-whatsapp btn-sm" style="width: 100%; justify-content: center;">
+            <i class="ri-whatsapp-line"></i> Chat Now
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2024 Manish Kumar. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <div class="whatsapp-fab">
+    <span class="whatsapp-fab-label">Chat with Manish</span>
+    <a href="#" onclick="openWhatsApp()" class="whatsapp-fab-btn" aria-label="Chat on WhatsApp"><i class="ri-whatsapp-line"></i></a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
