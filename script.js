@@ -5,7 +5,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   // === Navbar Scroll Effect ===
   const navbar = document.querySelector('.navbar');
-  if (navbar) {
+  const isHomePage = document.querySelector('.hero'); // Only home page has .hero
+
+  if (navbar && isHomePage) {
+    // Home page: toggle scrolled class based on scroll position
     const handleScroll = () => {
       if (window.scrollY > 60) {
         navbar.classList.add('scrolled');
@@ -16,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Initial check
   }
+  // Inner pages: navbar keeps 'scrolled' class from HTML — no toggling
 
   // === Mobile Menu Toggle ===
   const mobileToggle = document.getElementById('mobileToggle');
