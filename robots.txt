@@ -1,0 +1,6 @@
+# robots.txt for https://manishkumarevents.com/
+User-agent: *
+Allow: /
+
+Sitemap: https://manishkumarevents.com/sitemap.xml
+

@@ -69,6 +69,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 85px;
   font-size: 16px;
 }
 
@@ -1039,6 +1040,26 @@ p {
 textarea.form-control {
   min-height: 125px;
   resize: vertical;
+}
+
+.form-status-msg {
+  display: none;
+  padding: 0.85rem 1.15rem;
+  border-radius: var(--radius-sm);
+  margin-top: 1rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.form-status-msg.success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(37, 211, 102, 0.12);
+  color: #0b7334;
+  border: 1px solid rgba(37, 211, 102, 0.35);
 }
 
 .contact-info-card {

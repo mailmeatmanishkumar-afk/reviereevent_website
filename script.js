@@ -1,7 +1,26 @@
 /* ============================================
    MANISH KUMAR — LUXURY EVENT PLANNING & MANAGEMENT
-   Shared JavaScript & Interactions (Final Polish)
+   Shared JavaScript & Interactions (Production Ready)
    ============================================ */
+
+// === Global Site Configuration ===
+// Update your WhatsApp number here once, and it reflects everywhere on the website.
+window.SITE_CONFIG = {
+  whatsappPhone: '919800000000', // Format: Country code followed by 10-digit number without '+' or '-'
+  defaultMessage: 'Hi Manish! I visited your website and would like to inquire about Event Planning & Management services.'
+};
+
+// === WhatsApp Helper Function ===
+window.openWhatsApp = function(message, event) {
+  if (event && typeof event.preventDefault === 'function') {
+    event.preventDefault();
+  }
+  const rawPhone = window.SITE_CONFIG?.whatsappPhone || '919800000000';
+  const cleanPhone = String(rawPhone).replace(/[^\d]/g, '');
+  const finalMsg = message || window.SITE_CONFIG?.defaultMessage || 'Hi Manish! I would like to inquire about your event services.';
+  const url = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(finalMsg)}`;
+  window.open(url, '_blank', 'noopener,noreferrer');
+};
 
 document.addEventListener('DOMContentLoaded', () => {
   // === Navbar Scroll Effect ===
@@ -26,11 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileOverlay = document.getElementById('mobileOverlay');
 
   if (mobileToggle && mobileDrawer && mobileOverlay) {
+    mobileToggle.setAttribute('aria-expanded', 'false');
+
     const toggleMenu = () => {
       const isOpen = mobileDrawer.classList.contains('active');
       mobileToggle.classList.toggle('active', !isOpen);
       mobileDrawer.classList.toggle('active', !isOpen);
       mobileOverlay.classList.toggle('active', !isOpen);
+      mobileToggle.setAttribute('aria-expanded', String(!isOpen));
       document.body.style.overflow = !isOpen ? 'hidden' : '';
     };
 
@@ -38,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileToggle.classList.remove('active');
       mobileDrawer.classList.remove('active');
       mobileOverlay.classList.remove('active');
+      mobileToggle.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
     };
 
@@ -48,6 +71,18 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', closeMenu);
     });
   }
+
+  // === Active Nav Link Highlight based on current URL path ===
+  const currentPath = window.location.pathname.split('/').pop().toLowerCase() || 'index.html';
+  const allNavLinks = document.querySelectorAll('.nav-link');
+  
+  allNavLinks.forEach(link => {
+    link.classList.remove('active');
+    const href = (link.getAttribute('href') || '').toLowerCase();
+    if (href === currentPath || ((currentPath === '' || currentPath === '/') && href === 'index.html')) {
+      link.classList.add('active');
+    }
+  });
 
   // === Scroll Animations (Intersection Observer) ===
   const animatedElements = document.querySelectorAll('.animate-on-scroll');
@@ -109,12 +144,12 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(update);
   }
 
-  // === WhatsApp Helper ===
-  window.openWhatsApp = function(message) {
-    const phone = '919800000000'; // Target WhatsApp Number
-    const encodedMessage = encodeURIComponent(message || "Hi Manish! I visited your website and would like to inquire about Event Planning & Management services.");
-    window.open(`https://wa.me/${phone}?text=${encodedMessage}`, '_blank');
-  };
+  // === Date Picker Constraint (Disable past dates) ===
+  const dateInput = document.getElementById('eventDate');
+  if (dateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
+  }
 
   // === Contact Form Submission → WhatsApp ===
   const contactForm = document.getElementById('contactForm');
@@ -122,11 +157,11 @@ document.addEventListener('DOMContentLoaded', () => {
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
 
-      const name = this.querySelector('[name="name"]')?.value || '';
-      const phone = this.querySelector('[name="phone"]')?.value || '';
+      const name = this.querySelector('[name="name"]')?.value.trim() || '';
+      const phone = this.querySelector('[name="phone"]')?.value.trim() || '';
       const eventType = this.querySelector('[name="eventType"]')?.value || this.querySelector('[name="service"]')?.value || '';
       const eventDate = this.querySelector('[name="eventDate"]')?.value || '';
-      const message = this.querySelector('[name="message"]')?.value || '';
+      const message = this.querySelector('[name="message"]')?.value.trim() || '';
 
       let whatsappMsg = `Hi Manish! I would like to inquire about Event Planning.\n\n`;
       whatsappMsg += `• Name: ${name}\n`;
@@ -135,16 +170,20 @@ document.addEventListener('DOMContentLoaded', () => {
       if (eventDate) whatsappMsg += `• Tentative Date: ${eventDate}\n`;
       if (message) whatsappMsg += `• Details: ${message}`;
 
-      window.openWhatsApp(whatsappMsg);
+      // Show temporary status feedback
+      let statusMsg = document.getElementById('formStatusMsg');
+      if (!statusMsg) {
+        statusMsg = document.createElement('div');
+        statusMsg.id = 'formStatusMsg';
+        statusMsg.className = 'form-status-msg success';
+        contactForm.appendChild(statusMsg);
+      }
+      statusMsg.innerHTML = '<i class="ri-whatsapp-line"></i> Opening WhatsApp with your inquiry...';
+      statusMsg.style.display = 'flex';
+
+      setTimeout(() => {
+        window.openWhatsApp(whatsappMsg);
+      }, 300);
     });
   }
-
-  // === Active Nav Link Highlight based on current URL path ===
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-link').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
-      link.classList.add('active');
-    }
-  });
 });

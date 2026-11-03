@@ -9,12 +9,22 @@
   <meta name="author" content="Manish Kumar">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://manishkumarevents.com/">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
-  <!-- Open Graph -->
+  <!-- Open Graph / Facebook / WhatsApp -->
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://manishkumarevents.com/">
+  <meta property="og:site_name" content="Manish Kumar Events">
   <meta property="og:title" content="Manish Kumar | Luxury Event Planning & Management">
   <meta property="og:description" content="Crafting Unforgettable Moments — Weddings, Corporate Events, Private Parties & Stage Choreography in Patna, Bihar.">
-  <meta property="og:image" content="assets/images/event-hero.jpg">
+  <meta property="og:image" content="https://manishkumarevents.com/assets/images/event-hero.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://manishkumarevents.com/">
+  <meta name="twitter:title" content="Manish Kumar | Luxury Event Planning & Management">
+  <meta name="twitter:description" content="Crafting Unforgettable Moments — Weddings, Corporate Events, Private Parties & Stage Choreography in Patna, Bihar.">
+  <meta name="twitter:image" content="https://manishkumarevents.com/assets/images/event-hero.jpg">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,8 +43,20 @@
     "@context": "https://schema.org",
     "@type": "EventPlanner",
     "name": "Manish Kumar Events",
-    "image": "assets/images/event-hero.jpg",
-    "description": "Exclusive Event Planner & Manager specializing in Weddings, Corporate Events, Celebrations & Live Choreographed Performances in Patna.",
+    "url": "https://manishkumarevents.com/",
+    "image": "https://manishkumarevents.com/assets/images/event-hero.jpg",
+    "description": "Exclusive Event Planner & Manager specializing in Weddings, Corporate Events, Celebrations & Live Choreographed Performances in Patna, Bihar.",
+    "priceRange": "$$",
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Patna"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Bihar"
+      }
+    ],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Patna",
@@ -62,7 +84,7 @@
       </div>
 
       <div class="nav-actions">
-        <a href="#" onclick="openWhatsApp('Hi Manish! I would like to inquire about event planning services.')" class="btn btn-whatsapp btn-sm nav-whatsapp-btn">
+        <a href="javascript:void(0)" onclick="openWhatsApp('Hi Manish! I would like to inquire about event planning services.', event)" class="btn btn-whatsapp btn-sm nav-whatsapp-btn">
           <i class="ri-whatsapp-line"></i>
           <span>WhatsApp</span>
         </a>
@@ -85,7 +107,7 @@
     <a href="about.html" class="nav-link">About</a>
     <a href="contact.html" class="nav-link">Contact</a>
     <div class="mobile-cta">
-      <a href="#" onclick="openWhatsApp('Hi Manish! I want to discuss planning my upcoming event.')" class="btn btn-whatsapp btn-full">
+      <a href="javascript:void(0)" onclick="openWhatsApp('Hi Manish! I want to discuss planning my upcoming event.', event)" class="btn btn-whatsapp btn-full">
         <i class="ri-whatsapp-line"></i> Chat on WhatsApp
       </a>
     </div>
@@ -94,7 +116,7 @@
   <!-- ============ LUXURY HERO SECTION ============ -->
   <section class="hero" id="home">
     <div class="hero-bg">
-      <img src="assets/images/event-hero.jpg" alt="Luxury wedding event design by Manish Kumar">
+      <img src="assets/images/event-hero.jpg" alt="Luxury wedding event design by Manish Kumar" fetchpriority="high" width="1920" height="1080">
     </div>
     <div class="hero-overlay"></div>
     <div class="container hero-content">
@@ -113,7 +135,7 @@
         <a href="events.html" class="btn btn-primary">
           <i class="ri-calendar-event-fill"></i> Explore Our Services
         </a>
-        <a href="#" onclick="openWhatsApp('Hi Manish! I visited your website and would like to consult on an upcoming event.')" class="btn btn-outline">
+        <a href="javascript:void(0)" onclick="openWhatsApp('Hi Manish! I visited your website and would like to consult on an upcoming event.', event)" class="btn btn-outline">
           <i class="ri-whatsapp-line"></i> Book via WhatsApp
         </a>
       </div>
@@ -166,7 +188,7 @@
             <li><i class="ri-checkbox-circle-fill"></i> Theme Decoration & Lighting</li>
             <li><i class="ri-checkbox-circle-fill"></i> Complete Guest Hospitality</li>
           </ul>
-          <a href="#" onclick="openWhatsApp('Hi Manish! I want to inquire about Wedding Planning services.')" class="btn btn-outline btn-full">
+          <a href="javascript:void(0)" onclick="openWhatsApp('Hi Manish! I want to inquire about Wedding Planning services.', event)" class="btn btn-outline btn-full">
             <i class="ri-whatsapp-line"></i> Inquire for Wedding
           </a>
         </div>
@@ -183,7 +205,7 @@
             <li><i class="ri-checkbox-circle-fill"></i> VIP Hospitality & Logistics</li>
             <li><i class="ri-checkbox-circle-fill"></i> Branding & Media Coverage</li>
           </ul>
-          <a href="#" onclick="openWhatsApp('Hi Manish! I want to inquire about Corporate Event Management.')" class="btn btn-outline btn-full">
+          <a href="javascript:void(0)" onclick="openWhatsApp('Hi Manish! I want to inquire about Corporate Event Management.', event)" class="btn btn-outline btn-full">
             <i class="ri-whatsapp-line"></i> Inquire for Corporate
           </a>
         </div>
@@ -200,7 +222,7 @@
             <li><i class="ri-checkbox-circle-fill"></i> DJ, Sound & Entertainment</li>
             <li><i class="ri-checkbox-circle-fill"></i> Catering & Beverage Management</li>
           </ul>
-          <a href="#" onclick="openWhatsApp('Hi Manish! I want to inquire about Private Celebration planning.')" class="btn btn-outline btn-full">
+          <a href="javascript:void(0)" onclick="openWhatsApp('Hi Manish! I want to inquire about Private Celebration planning.', event)" class="btn btn-outline btn-full">
             <i class="ri-whatsapp-line"></i> Inquire for Party
           </a>
         </div>
@@ -217,7 +239,7 @@
             <li><i class="ri-checkbox-circle-fill"></i> Family Sangeet Choreography</li>
             <li><i class="ri-checkbox-circle-fill"></i> Concept Entries & Light FX</li>
           </ul>
-          <a href="#" onclick="openWhatsApp('Hi Manish! I want to inquire about Stage Dance Performances & Choreography.')" class="btn btn-outline btn-full">
+          <a href="javascript:void(0)" onclick="openWhatsApp('Hi Manish! I want to inquire about Stage Dance Performances & Choreography.', event)" class="btn btn-outline btn-full">
             <i class="ri-whatsapp-line"></i> Book Dance Show
           </a>
         </div>
@@ -234,7 +256,7 @@
             <li><i class="ri-checkbox-circle-fill"></i> Celebrity & Artist Coordination</li>
             <li><i class="ri-checkbox-circle-fill"></i> Security & Crowd Control</li>
           </ul>
-          <a href="#" onclick="openWhatsApp('Hi Manish! I want to inquire about College Fest management.')" class="btn btn-outline btn-full">
+          <a href="javascript:void(0)" onclick="openWhatsApp('Hi Manish! I want to inquire about College Fest management.', event)" class="btn btn-outline btn-full">
             <i class="ri-whatsapp-line"></i> Inquire for Fest
           </a>
         </div>
@@ -251,7 +273,7 @@
             <li><i class="ri-checkbox-circle-fill"></i> Guest Transport & Lodging</li>
             <li><i class="ri-checkbox-circle-fill"></i> On-Ground Event Operations</li>
           </ul>
-          <a href="#" onclick="openWhatsApp('Hi Manish! I want to inquire about Destination Event planning.')" class="btn btn-outline btn-full">
+          <a href="javascript:void(0)" onclick="openWhatsApp('Hi Manish! I want to inquire about Destination Event planning.', event)" class="btn btn-outline btn-full">
             <i class="ri-whatsapp-line"></i> Inquire for Destination
           </a>
         </div>
@@ -307,7 +329,7 @@
       </div>
 
       <div style="text-align: center; margin-top: 2.5rem;" class="animate-on-scroll">
-        <a href="#" onclick="openWhatsApp('Hi Manish! I want to consult on full vendor management for my event.')" class="btn btn-primary">
+        <a href="javascript:void(0)" onclick="openWhatsApp('Hi Manish! I want to consult on full vendor management for my event.', event)" class="btn btn-primary">
           <i class="ri-whatsapp-line"></i> Consult Vendor Package
         </a>
       </div>
@@ -325,7 +347,7 @@
 
       <div class="grid-4">
         <div class="highlight-card animate-on-scroll">
-          <img src="assets/images/event-hero.jpg" alt="Grand Wedding Decor">
+          <img src="assets/images/event-hero.jpg" alt="Grand Wedding Decor" loading="lazy" width="600" height="400">
           <div class="highlight-overlay">
             <span class="highlight-tag">Wedding Gala</span>
             <h4 class="highlight-title">Royal Palace Wedding</h4>
@@ -333,7 +355,7 @@
         </div>
 
         <div class="highlight-card animate-on-scroll">
-          <img src="assets/images/contemporary.jpg" alt="Stage Dance Show">
+          <img src="assets/images/contemporary.jpg" alt="Stage Dance Show" loading="lazy" width="600" height="400">
           <div class="highlight-overlay">
             <span class="highlight-tag">Live Choreography</span>
             <h4 class="highlight-title">Sangeet Stage Performance</h4>
@@ -341,7 +363,7 @@
         </div>
 
         <div class="highlight-card animate-on-scroll">
-          <img src="assets/images/salsa.jpg" alt="Corporate Gala">
+          <img src="assets/images/salsa.jpg" alt="Corporate Gala" loading="lazy" width="600" height="400">
           <div class="highlight-overlay">
             <span class="highlight-tag">Corporate Event</span>
             <h4 class="highlight-title">Annual Corporate Summit</h4>
@@ -349,7 +371,7 @@
         </div>
 
         <div class="highlight-card animate-on-scroll">
-          <img src="assets/images/bollyhop.jpg" alt="College Fest">
+          <img src="assets/images/bollyhop.jpg" alt="College Fest" loading="lazy" width="600" height="400">
           <div class="highlight-overlay">
             <span class="highlight-tag">Cultural Fest</span>
             <h4 class="highlight-title">University Youth Festival</h4>
@@ -423,7 +445,7 @@
       <h2 class="animate-on-scroll">Ready to Plan Your Next Event?</h2>
       <p class="animate-on-scroll">Let's discuss your vision, budget, and requirements. Chat with Manish Kumar directly on WhatsApp for an instant consultation.</p>
       <div class="cta-buttons animate-on-scroll">
-        <a href="#" onclick="openWhatsApp('Hi Manish! I want to start planning an upcoming event.')" class="btn btn-whatsapp btn-lg">
+        <a href="javascript:void(0)" onclick="openWhatsApp('Hi Manish! I want to start planning an upcoming event.', event)" class="btn btn-whatsapp btn-lg">
           <i class="ri-whatsapp-line"></i> Chat on WhatsApp
         </a>
         <a href="contact.html" class="btn btn-outline btn-lg">
@@ -444,9 +466,9 @@
           </a>
           <p>Exclusive Event Planning & Management based in Patna, Bihar. Turning moments into unforgettable memories with flawless execution.</p>
           <div class="footer-social">
-            <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
-            <a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
-            <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+            <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+            <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
           </div>
         </div>
 
@@ -471,7 +493,7 @@
           <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0.75rem;">
             <i class="ri-map-pin-line text-gold"></i> Patna, Bihar, India
           </p>
-          <a href="#" onclick="openWhatsApp()" class="btn btn-whatsapp btn-sm" style="margin-top:0.5rem; width:100%; justify-content:center;">
+          <a href="javascript:void(0)" onclick="openWhatsApp('Hi Manish! I want to get in touch regarding an event.', event)" class="btn btn-whatsapp btn-sm" style="margin-top:0.5rem; width:100%; justify-content:center;">
             <i class="ri-whatsapp-line"></i> Direct WhatsApp
           </a>
         </div>
@@ -485,7 +507,7 @@
 
   <!-- WhatsApp Floating FAB Button -->
   <div class="whatsapp-fab">
-    <a href="#" onclick="openWhatsApp()" class="whatsapp-fab-btn" aria-label="Chat on WhatsApp">
+    <a href="javascript:void(0)" onclick="openWhatsApp('Hi Manish! I want to inquire about Event Planning & Management.', event)" class="whatsapp-fab-btn" aria-label="Chat on WhatsApp">
       <i class="ri-whatsapp-line"></i>
     </a>
   </div>
