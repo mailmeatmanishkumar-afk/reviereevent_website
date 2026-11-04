@@ -4,9 +4,15 @@
    ============================================ */
 
 // === Global Site Configuration ===
-// Update your WhatsApp number here once, and it reflects everywhere on the website.
+// Update your contact details here once, and it reflects everywhere on the website.
 window.SITE_CONFIG = {
-  whatsappPhone: '919800000000', // Format: Country code followed by 10-digit number without '+' or '-'
+  whatsappPhone: '918893535829', // Main number & WhatsApp (Country code 91 + 10 digits)
+  mainPhoneFormatted: '+91 88935 35829',
+  altPhone: '7762908507',
+  altPhoneFormatted: '+91 77629 08507',
+  email: 'reviereevent@gmail.com',
+  instagramUrl: 'https://instagram.com/reviereevent',
+  facebookUrl: 'https://facebook.com/Reviere-Events',
   defaultMessage: 'Hi Manish! I visited your website and would like to inquire about Event Planning & Management services.'
 };
 
@@ -15,7 +21,7 @@ window.openWhatsApp = function(message, event) {
   if (event && typeof event.preventDefault === 'function') {
     event.preventDefault();
   }
-  const rawPhone = window.SITE_CONFIG?.whatsappPhone || '919800000000';
+  const rawPhone = window.SITE_CONFIG?.whatsappPhone || '918893535829';
   const cleanPhone = String(rawPhone).replace(/[^\d]/g, '');
   const finalMsg = message || window.SITE_CONFIG?.defaultMessage || 'Hi Manish! I would like to inquire about your event services.';
   const url = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(finalMsg)}`;
